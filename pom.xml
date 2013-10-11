@@ -3,7 +3,7 @@
 	<groupId>fi.foyt</groupId>
 	<artifactId>foursquare-api</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.3-SNAPSHOT-snr</version>
+	<version>1.0.3</version>
 	<name>Foursquare API</name>
 	<licenses>
 		<license>
@@ -37,11 +37,6 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.google.appengine</groupId>
-			<artifactId>appengine-api-1.0-sdk</artifactId>
-			<version>1.6.5</version>
-		</dependency>
-		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
 			<version>2.5</version>
@@ -51,10 +46,16 @@
 	</dependencies>
 
 	<distributionManagement>
-		<repository>
-			<id>foursquareapijava</id>
-			<url>svn:https://foursquare-api-java.googlecode.com/svn/repository</url>
-		</repository>
+    <repository>
+      <id>releases</id>
+      <name>Factual Releases</name>
+      <url>http://maven.corp.factual.com/nexus/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshots</id>
+      <name>Factual Snapshots</name>
+      <url>http://maven.corp.factual.com/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
 	</distributionManagement>
 
 	<build>
