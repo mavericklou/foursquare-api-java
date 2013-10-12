@@ -1,6 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>fi.foyt</groupId>
+	<groupId>mavericklou</groupId>
 	<artifactId>foursquare-api</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0.3</version>
@@ -45,18 +45,13 @@
 		</dependency>
 	</dependencies>
 
-	<distributionManagement>
+  <distributionManagement>
     <repository>
-      <id>releases</id>
-      <name>Factual Releases</name>
-      <url>http://maven.corp.factual.com/nexus/content/repositories/releases</url>
+      <id>clojars</id>
+      <name>Clojars repository</name>
+      <url>https://clojars.org/repo</url>
     </repository>
-    <snapshotRepository>
-      <id>snapshots</id>
-      <name>Factual Snapshots</name>
-      <url>http://maven.corp.factual.com/nexus/content/repositories/snapshots</url>
-    </snapshotRepository>
-	</distributionManagement>
+  </distributionManagement>
 
 	<build>
 		<plugins>
@@ -105,19 +100,6 @@
 						<phase>verify</phase>
 						<goals>
 							<goal>jar-no-fork</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.8</version>
-				<executions>
-					<execution>
-						<id>attach-javadocs</id>
-						<goals>
-							<goal>jar</goal>
 						</goals>
 					</execution>
 				</executions>
